@@ -1,0 +1,25 @@
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+span {
+	display: block;
+	margin: 10px;
+}
+
+header {
+	margin: 0px;
+}
+
+a {
+	text-decoration: None;
+	color: white;
+	border-radius: 15px;
+}
+
+a:hover {
+	background: rgb(63, 63, 180);
+}
