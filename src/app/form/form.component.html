@@ -1,12 +1,14 @@
 <form [formGroup]="profileForm">
   <label>
     Name:
-    <input type="text" formControlName="name" (fdata.name)=required>
+    <input type="text" formControlName="name" required>
   </label>
   <label>
     Email:
     <input type="email" formControlName="email" required>
   </label>
+  <label>
+  <span>Feedback:</span>
    <label>
      <input type="radio" value="Great" formControlName="feedback" required>
        <span>Great</span>
@@ -19,20 +21,19 @@
      <input type="radio" value="Not Good" formControlName="feedback">
        <span>Not Good</span>
    </label>
+ </label>
 
   <label>
-    Comments
+    Comments:
     <textarea type="textarea" formControlName="comment"></textarea>
   </label>
   <button type="submit" [disabled]="!profileForm.valid" (click)="onSubmit()">Submit</button>
 </form>
 
 
-<p>
-  Form Value: {{ profileForm.value | json }}
-</p>
-
-
-<p>
-  Form Status: {{ profileForm.status }}
-</p>
+<div *ngIf="success==1" class="alert alert-success" role="alert">
+  Submitted Successfully
+</div>
+<div *ngIf="fail==1" class="alert alert-danger" role="alert">
+  Submit Failed
+</div>

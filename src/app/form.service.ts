@@ -35,7 +35,7 @@ export class FormService {
 
   postData(data: form_data) {
   return this.http.post<form_data>(this.posturl, JSON.stringify(data), this.httpOptions).pipe(
-  		tap((data) => console.log("done"))
+  		tap((data) => console.log("successful"))
     );
 }
 }

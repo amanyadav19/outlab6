@@ -8,9 +8,9 @@ import { FormService, form_data } from '../form.service';
   styleUrls: ['./form.component.scss']
 })
 export class FormComponent implements OnInit {
-	error: any;
-  headers: string[];
   fdata: form_data;
+  success: number=0;
+  fail: number=0;
 	profileForm = this.fb.group({
     name: ['', Validators.required],
     email: ['',Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$")],
@@ -20,7 +20,10 @@ export class FormComponent implements OnInit {
   constructor(private fb: FormBuilder, private formService: FormService) { }
 
   clear() {
-    this.fdata = undefined;
+    this.profileForm.setValue({name: '',
+    email: '',
+    feedback: '',
+    comment: ''})
   }
 
   ngOnInit(): void {
@@ -37,17 +40,31 @@ export class FormComponent implements OnInit {
   }
   onSubmit(){
   	this.formService.postData(this.profileForm.value)
-  	.subscribe(data => {
-  	console.log(data)
-  	});
+  	.subscribe(
+  		data => this.raisePopup("success"),
+      errors => this.raisePopup("fail")
+    );
   }
+
   getInitialValues(): void {
   	this.formService.getInitialData()
       .subscribe((data: form_data) => {this.fdata = { ...data};
       this.updateProfile();
       });
   }
-  raisePopup() {
-
+  raisePopup(s: string) {
+  	if(s=="success") {
+  		this.clear();
+  		this.success=1;
+  		setTimeout(function() {
+       this.success=0;
+   		}.bind(this), 2000);
+  	}
+  	else {
+  		this.fail=1;
+  		setTimeout(function() {
+       this.fail=0;
+   		}.bind(this), 2000);
+  	}
   }
 }

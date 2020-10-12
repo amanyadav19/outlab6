@@ -4,3 +4,6 @@ https://www.w3schools.com/howto/howto_css_responsive_form.asp
 https://docs.angularjs.org/guide/forms
 https://stackoverflow.com/questions/50220106/in-angular-using-httpclient-i-am-unable-to-get-the-json-data-when-i-submit-the
 https://blog.mailtrap.io/angular-email-validation/
+https://stackoverflow.com/questions/46019771/catching-errors-in-angular-httpclient
+https://stackoverflow.com/questions/41335702/how-to-empty-form-inputs-in-angular-js-after-submission
+https://stackoverflow.com/questions/35163009/angular-2-show-and-hide-an-element
