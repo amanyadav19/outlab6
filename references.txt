@@ -1,2 +1,6 @@
 https://stackoverflow.com/questions/55609555/error-module-not-found-error-cant-resolve-angular-cdk-scrolling
 https://www.smashingmagazine.com/2018/11/a-complete-guide-to-routing-in-angular/
+https://www.w3schools.com/howto/howto_css_responsive_form.asp
+https://docs.angularjs.org/guide/forms
+https://stackoverflow.com/questions/50220106/in-angular-using-httpclient-i-am-unable-to-get-the-json-data-when-i-submit-the
+https://blog.mailtrap.io/angular-email-validation/

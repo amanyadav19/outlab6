@@ -1,1 +1,38 @@
-<p>form works!</p>
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+  <label>
+    Name:
+    <input type="text" formControlName="name" required>
+  </label>
+  <label>
+    Email:
+    <input type="email" formControlName="email" required>
+  </label>
+   <label>
+     <input type="radio" value="Great" formControlName="feedback" required>
+       <span>Great</span>
+   </label>
+   <label>
+     <input type="radio" value="Okay" formControlName="feedback" required>
+       <span>Okay</span>
+   </label>
+   <label>
+     <input type="radio" value="Not Good" formControlName="feedback">
+       <span>Not Good</span>
+   </label>
+
+  <label>
+    Comments
+    <textarea type="textarea" formControlName="comment"></textarea>
+  </label>
+  <button type="submit" [disabled]="!profileForm.valid" (click)="onSubmit()">Submit</button>
+</form>
+
+
+<p>
+  Form Value: {{ profileForm.value | json }}
+</p>
+
+
+<p>
+  Form Status: {{ profileForm.status }}
+</p>
