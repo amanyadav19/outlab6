@@ -1,7 +1,7 @@
-<form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+<form [formGroup]="profileForm">
   <label>
     Name:
-    <input type="text" formControlName="name" required>
+    <input type="text" formControlName="name" (fdata.name)=required>
   </label>
   <label>
     Email:
