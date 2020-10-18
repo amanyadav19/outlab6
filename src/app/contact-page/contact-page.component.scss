@@ -1,5 +1,14 @@
-.heading {
+%text-center{
 	text-align: center;
+}
+
+%block-centering{
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.heading {
+	@extend %text-center;
 }
 
 
@@ -15,5 +24,28 @@
 }
 
 .alpha {
-	text-align: center;
+	@extend %text-center;
+}
+
+
+.center{
+	@extend %block-centering;
+}
+
+table{
+	background-image: linear-gradient(140deg, #EADEDB 0%, #BC70A4 50%, #BFD641 75%);
+	font-size: large;
+}
+
+
+th,td{
+	padding: 5px 30px 5px 30px;
+}
+
+th{
+	color: blue;
+}
+
+td{
+	color: #9900cc;
 }

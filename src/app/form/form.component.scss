@@ -1,3 +1,12 @@
+@mixin set_width($wdth){
+  width: $wdth;
+}
+
+@mixin set_height($ht){
+  height: $ht;
+}
+
+
 :host {
   display: flex;
   flex-direction: column;
@@ -6,14 +15,14 @@
 
 label {
   display: block;
-  width: 6em;
+  @include set-width(6em);
   margin: .5em 0;
   color: #607D8B;
   font-weight: bold;
 }
 
 input {
-  height: 2em;
+  @include set-height(2em);
   font-size: 1em;
   padding-left: .4em;
 }
@@ -35,4 +44,12 @@ button:disabled {
   background-color: #eee;
   color: #ccc;
   cursor: auto;
+}
+
+h2{
+  color: red;
+}
+
+form{
+  margin: 20px;
 }

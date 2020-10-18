@@ -1,11 +1,11 @@
 <form [formGroup]="profileForm">
   <label>
     Name:
-    <input type="text" formControlName="name" required>
+    <input type="text" formControlName="name" size="40" required>
   </label>
   <label>
     Email:
-    <input type="email" formControlName="email" required>
+    <input type="email" formControlName="email" size="40" required>
   </label>
   <label>
   <span>Feedback:</span>
@@ -25,7 +25,7 @@
 
   <label>
     Comments:
-    <textarea type="textarea" formControlName="comment"></textarea>
+    <textarea type="textarea" formControlName="comment" cols="40"></textarea>
   </label>
   <button type="submit" [disabled]="!profileForm.valid" (click)="onSubmit()">Submit</button>
 </form>

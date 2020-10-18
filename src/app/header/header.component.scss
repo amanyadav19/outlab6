@@ -1,5 +1,6 @@
 @import '~@angular/material/prebuilt-themes/indigo-pink.css';
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+$bgcolor : rgb(63,63,180);
 
 .example-spacer {
   flex: 1 1 auto;
@@ -21,5 +22,5 @@ a {
 }
 
 a:hover {
-	background: rgb(63, 63, 180);
+	background: green;
 }
