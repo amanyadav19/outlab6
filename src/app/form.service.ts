@@ -33,7 +33,7 @@ export class FormService {
       );
   }
 
-  postData(data: form_data) {
+  postData(data: form_data): Observable<form_data>{
   return this.http.post<form_data>(this.posturl, JSON.stringify(data), this.httpOptions).pipe(
   		tap((data) => console.log("successful"))
     );
